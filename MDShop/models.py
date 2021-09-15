@@ -2,7 +2,6 @@ from django.db import models
 from django.urls import reverse
 from autoslug import AutoSlugField
 from django.db.models.signals import pre_save
-from django.db import models 
 from datetime import date
 from mptt.fields import  TreeForeignKey
 from mptt.models import MPTTModel
@@ -97,7 +96,7 @@ class CustomerLike(models.Model):
             CustomerLike.objects.create(likeCustomer=instance)  
 
     def __str__(self):
-        return self.likeCustomer.created_at   
+        return self.created_at 
 
 
 class CustomerAddress(models.Model):

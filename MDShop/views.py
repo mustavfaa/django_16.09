@@ -1,25 +1,15 @@
 from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework import generics, permissions
-from .models import smartphone,Genre
-from .serializers import MDShopListSerializer,MDShopSerializer
-from rest_framework import generics
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.pagination import LimitOffsetPagination,PageNumberPagination 
-from django_filters.rest_framework import DjangoFilterBackend
 from .service import  ShoppFilter
 from django_filters import rest_framework as filters
 from rest_framework.exceptions import PermissionDenied
 from rest_framework import generics, permissions
-from rest_framework.response import Response
 from django.db.models import Q
 from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import permissions
 from django.contrib.auth.models import User
 from django.contrib.auth import login
-from rest_framework import permissions
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from .models import *
 from .serializers import *
