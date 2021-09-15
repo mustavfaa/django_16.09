@@ -1,0 +1,316 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MDShop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+       {% load static %}
+   
+   
+   
+   <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+   <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+   <link href="{% static 'css/core.css' %}" rel="stylesheet">
+   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+   <link href="{% static 'css/shortcode/shortcodes.css' %}" rel="stylesheet">
+   <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+   <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|Roboto" rel="stylesheet">
+    <!-- Modernizr JS -->
+    <script type="text/javascript" src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <style type="text/css">
+             #custom-search-form {
+        margin:0;
+        margin-top: 5px;
+        padding: 0;
+    }
+ 
+    #custom-search-form .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-form button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
+    body{
+        background: #f4f4f4;
+        font-family: MuseoSansCyrl,sans-serif;
+}
+      </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->  
+
+    <!-- Body main wrapper start -->
+    <div class="wrapper fixed__footer">
+        <!-- Start Header Style -->
+        <header id="header" class="htc-header header--3 bg__white">
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3" >
+
+                           <img class="logoo" style="margin-left: 50px; width: 150px;" src=" {% static 'images/logo.png'%}" >
+                        
+
+
+                        </div>
+                        <div class="col-md-9 ">
+                         
+                       
+
+                           
+                         <form action="" method="post" class="search">
+                            <input type="search" name="" placeholder="поиск" class="input" />
+                            <input type="submit" name="" value="" class="submit" />
+                        </form>
+
+                             
+
+
+
+                        </div>
+                        
+
+
+                        </div>  
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+        <!-- End Header Style -->
+      
+
+      
+
+
+
+
+{%block content%}
+
+
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer id="footer" class="footer-1" style="margin-top: 20PX;">
+<div class="main-footer widgets-dark typo-light">
+<div class="container">
+<div class="row">
+   
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget subscribe no-box">
+<h5 class="widget-title">COMPANY NAME<span></span></h5>
+<p>About the company, little discription will goes here.. </p>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget no-box">
+<h5 class="widget-title">Quick Links<span></span></h5>
+<ul class="thumbnail-widget">
+<li>
+<div class="thumb-content"><a href="#.">Get Started</a></div>  
+</li>
+<li>
+<div class="thumb-content"><a href="#.">Top Leaders</a></div>  
+</li>
+<li>
+<div class="thumb-content"><a href="#.">Success Stories</a></div>  
+</li>
+<li>
+<div class="thumb-content"><a href="#.">Event/Tickets</a></div>  
+</li>
+<li>
+<div class="thumb-content"><a href="#.">News</a></div>  
+</li>
+<li>
+<div class="thumb-content"><a href="#.">Lifestyle</a></div>  
+</li>
+<li>
+<div class="thumb-content"><a href="#.">About</a></div>  
+</li>
+</ul>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget no-box">
+<h5 class="widget-title">Get Started<span></span></h5>
+<p>Get access to your full Training and Marketing Suite.</p>
+<a class="btn" href="#." target="_blank">Register Now</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+
+<div class="widget no-box">
+<h5 class="widget-title">Contact Us<span></span></h5>
+
+<p><a href="mailto:info@domain.com" title="glorythemes">info@domain.com</a></p>
+<ul class="social-footer2">
+<li class=""><a href="#"><i class="fa fa-youtube" style="font-size:21px;"></i></a></li>
+<li class=""><a href="#"><i class="fa fa-facebook-f" style="font-size:21px;"></i></a></li>
+<li class=""> <a href="#"><i class="fa fa-twitter" style="font-size:21px;"></i></a></li>
+<li class=""><a href="#"><i class="fa fa-instagram" style="font-size:21px;"></i></a></li>
+<li class=""><a href="#"><i class="fa fa-vk" style="font-size:21px;"></i></a></li>
+         
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+   
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+<p>Copyright Company Name © 2016. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- End Feature Product -->
+           {% load static %}
+   <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'js/vendor/jquery-1.12.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+   
+
+</body>
+
+</html>

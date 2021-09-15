@@ -1,0 +1,1273 @@
+
+{% extends 'MDShop/base.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%block content%}
+
+
+
+
+
+ <div class=" fixed__footer">
+        <!-- Start Header Style -->
+        <header id="header" class="htc-header header--3 " style="background: rgba(205, 214, 219, 0.3);">
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
+                <div class="container">
+                    <div class="row">
+                        
+                        <!-- Start MAinmenu Ares -->
+                        <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6">
+                            <nav class="mainmenu__nav hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                    <li class="drop"><a href="index.html">Категория</a>
+                                        <ul class="dropdown">
+                                             {% load mptt_tags %}
+                                    
+                                                <ul>
+                        
+                                                             <div class="categories-menu mrg-xs">
+                                                                    
+                                                                    <div class="category-menu-list">
+                                                                       
+
+                                                                            
+                                                                                  
+                                                  
+
+
+                                         
+                                                                            {% load mptt_tags %}
+                                                                            
+                                                                            <ul>
+                                                    
+                                                                                        {% recursetree category %}
+                                                                                        
+
+                                                                                            <li><a href="/category/{{ node.id }}/{{ node.slug }}"> {{ node.name }}<i class="zmdi zmdi-chevron-right"></i></a>
+                                                                                                {% if not node.is_leaf_node %}
+                                                                                                    <div class="category-menu-dropdown">
+                                                                                                      <div class="category-part-1 category-common mb--30">
+                                                                                                       
+                                                                                                        
+                                                                                                        <ul>
+                                                                                                            
+                                                                                                            <li><a href="#"> {{ children }}</a></li>
+                                                                                                            
+
+                                                                                                        </ul>
+                                                                                                      </div>                                                                
+                                                                                                         
+                                                                                                    </div>
+                                                                                                   {% endif %}
+                                                                                                        </li>    
+                                                                                                       
+
+                                                                                               {% endrecursetree %}     
+                                                                                                
+                                                                                            
+                                                                                            
+                                                                            </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                            
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                          
+                                                                    
+                                                                
+                                                                
+                                                </ul>
+
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-gutter-box-3.html">portfolio</a>
+                                        <ul class="dropdown">
+                                            <li><a href="portfolio-gutter-box-3.html">Boxed Gutter 3 Col</a></li>
+                                            <li><a href="portfolio-gutter-full-wide-4.html">Wide Gutter 4 Col </a></li>
+                                            <li><a href="portfolio-card-box-3.html">Card Gutter 3 Col </a></li>
+                                            <li><a href="portfolio-masonry-3.html">Masonry Box 3 Col </a></li>
+                                            <li><a href="portfolio-gutter-masonry-fullwide-4.html">Masonry Wide 4 Col </a></li>
+                                            <li><a href="portfolio-gutter-box-3-carousel.html">carousel Gutter 3 Col </a></li>
+                                            <li><a href="portfolio-justified-box-3.html">justified box 3 Col</a></li>
+                                            <li><a href="single-portfolio-gallery.html">Portfolio Details </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="blog.html">Blog</a>
+                                        <ul class="dropdown">
+                                            <li><a href="blog.html">blog 3 column</a></li>
+                                            <li><a href="blog-2-col-rightsidebar.html">2 col right siderbar</a></li>
+                                            <li><a href="blog-details-left-sidebar.html"> blog details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="shop.html">Shop</a>
+                                        <ul class="dropdown mega_dropdown">
+                                            <!-- Start Single Mega MEnu -->
+                                            <li><a class="mega__title" href="shop.html">shop layout</a>
+                                                <ul class="mega__item">
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- End Single Mega MEnu -->
+                                            <!-- Start Single Mega MEnu -->
+                                            <li><a class="mega__title" href="shop.html">product details layout</a>
+                                                <ul class="mega__item">
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                    <li><a href="#">demo page title</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- End Single Mega MEnu -->
+                                            <!-- Start Single Mega MEnu -->
+                                            <li>
+                                                <ul class="mega__item">
+                                                    <li>
+                                                        <div class="mega-item-img">
+                                                            <a href="shop.html">
+                                                                <img src="images/feature-img/3.png" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <!-- End Single Mega MEnu -->
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="#">pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="about.html">about</a></li>
+                                            <li><a href="shop.html">shop</a></li>
+                                            <li><a href="shop-sidebar.html">shop sidebar</a></li>
+                                            <li><a href="product-details-sticky-right.html">product details</a></li>
+                                            <li><a href="cart.html">cart</a></li>
+                                            <li><a href="wishlist.html">wishlist</a></li>
+                                            <li><a href="checkout.html">checkout</a></li>
+                                            <li><a href="team.html">team</a></li>
+                                            <li><a href="login-register.html">login & register</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">contact</a></li>
+                                </ul>
+                            </nav>
+                            <div class="mobile-menu clearfix visible-xs visible-sm">
+                                <nav id="mobile_dropdown">
+                                    <ul>
+                                        <li><a href="index.html">Home</a>
+                                            <ul>
+                                                <li><a href="index.html">Home 1</a></li>
+                                                <li><a href="index-2.html">Home 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">portfolio</a>
+                                            <ul class="dropdown">
+                                                <li><a href="portfolio-gutter-box-3.html">Boxed Gutter 3 Col</a></li>
+                                                <li><a href="portfolio-gutter-full-wide-4.html">Wide Gutter 4 Col </a></li>
+                                                <li><a href="portfolio-card-box-3.html">Card Gutter 3 Col </a></li>
+                                                <li><a href="portfolio-masonry-3.html">Masonry Box 3 Col </a></li>
+                                                <li><a href="portfolio-gutter-masonry-fullwide-4.html">Masonry Wide 4 Col </a></li>
+                                                <li><a href="portfolio-gutter-box-3-carousel.html">carousel Gutter 3 Col </a></li>
+                                                <li><a href="portfolio-justified-box-3.html">justified box 3 Col</a></li>
+                                                <li><a href="single-portfolio-gallery.html">Portfolio Details </a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog.html">blog</a>
+                                            <ul>
+                                                <li><a href="blog.html">blog 3 column</a></li>
+                                                <li><a href="blog-2-col-rightsidebar.html">2 col right siderbar</a></li>
+                                                <li><a href="blog-details-left-sidebar.html"> blog details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">pages</a>
+                                            <ul>
+                                                <li><a href="about.html">about</a></li>
+                                                <li><a href="shop.html">shop</a></li>
+                                                <li><a href="shop-sidebar.html">shop sidebar</a></li>
+                                                <li><a href="product-details-sticky-right.html">product details</a></li>
+                                                <li><a href="cart.html">cart</a></li>
+                                                <li><a href="wishlist.html">wishlist</a></li>
+                                                <li><a href="checkout.html">checkout</a></li>
+                                                <li><a href="team.html">team</a></li>
+                                                <li><a href="login-register.html">login & register</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>                          
+                        </div>
+                        <!-- End MAinmenu Ares -->
+                        <div class="col-md-2 col-sm-4 col-xs-3">  
+                            <ul class="menu-extra">
+                                <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
+                                <li><a href="login-register.html"><span class="ti-user"></span></a></li>
+                                <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
+                                <li class="toggle__menu hidden-xs hidden-sm"><span class="ti-menu"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+
+
+
+
+
+
+
+{%load static%}
+<style type="text/css">
+
+        
+
+        #content-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column{
+            width: 500px;
+            
+
+        }
+
+        #featured{
+            max-width: 500px;
+            max-height: 600px;
+            object-fit: cover;
+            cursor: pointer;
+            
+
+        }
+
+
+
+        .thumbnail{
+            object-fit: cover;
+            max-width: 180px;
+            max-height: 100px;
+            cursor: pointer;
+            opacity: 0.5;
+            margin: 5px;
+            
+
+        }
+
+        .thumbnail:hover{
+            opacity:1;
+        }
+
+        .active{
+            opacity: 1;
+        }
+
+        #slide-wrapper{
+            max-width: 500px;
+            display: flex;
+            min-height: 100px;
+            align-items: center;
+        }
+
+        #slider{
+            width: 440px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: hidden;
+
+        }
+
+        #slider{
+            width: 440px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+
+
+        }
+
+        #slider::-webkit-scrollbar {
+            width: 8px;
+
+        }
+
+        #slider::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+        }
+         
+        #slider::-webkit-scrollbar-thumb {
+          background-color: black;
+          outline: 1px solid slategrey;
+           border-radius: 100px;
+
+        }
+
+        #slider::-webkit-scrollbar-thumb:hover{
+            background-color: black;
+        }
+
+        
+
+        .arrow{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .arrow:hover{
+            opacity: .5;
+            width: 35px;
+            height: 35px;
+        }
+        .botted{
+            justify-content: space-between;display: flex;border-bottom: dotted 1px #D3D3D3;margin-top: 10px;font-size: 12px;
+        }
+        .botted-1{
+            margin-top: 10px;
+        }
+        .botted-2{
+            max-width: 60%;
+        }
+        .rcenter{
+            font-family: MuseoSansCyrl,sans-serif;
+        }
+
+        
+    </style>
+
+<div class="container" style="margin-top: 50px;background-color: white;">
+                                <style>
+                                body{
+                                        background-color: #f4f4f4;
+                                        font-family: MuseoSansCyrl,sans-serif;
+                                }
+
+                                </style>
+
+    <div class="row">
+
+                        <div class="col-md-5" style="height: 650px;">
+                                        <div id="content-wrapper">
+                                            <div class="column">
+                                                <img id="featured" src="{%static 'images/phone.jpg'%}">
+
+                                                <div id="slide-wrapper">
+                                                    
+
+                                                    <div id="slider" style="height: 150px; width: auto;">
+                                                        
+
+                                                    
+                                                        <img class="thumbnail" src="{%static 'images/phone.jpg'%}">
+                                                        <img class="thumbnail" src="{%static 'images/geop.png'%}">
+                                                        <img class="thumbnail" src="{%static 'images/phone.jpg'%}">
+                                                        <img class="thumbnail" src="{%static 'images/geop.png'%}">
+                                                        <img class="thumbnail" src="{%static 'images/geop.png'%}">
+                                                        <img class="thumbnail" src="{%static 'images/phone.jpg'%}">
+                                                        <img class="thumbnail" src="{%static 'images/geop.png'%}">
+                                                
+                                                
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+            
+
+
+
+
+
+            <div class="col-md-7">
+                <h3 style="margin-left: 10px;">Смартфон Apple iPhone 11 64GB Black</h3>
+
+                    <hr>
+                <div class="col-md-12">
+
+                    <div class="col-md-6">
+                        
+                        
+
+
+                        <h1 style="margin-left: 10px;">20 000₸</h1>
+
+                        <div class="kacompos-dakucels" style="margin-top: 30px;">
+                          
+                          <button class="constructos-knopok adenscarlub">Добавить в корзину</button>
+                          
+                        </div>
+                        <h5 style="margin-left: 15px;">Описание  |   <span><a href="">Все характеристики</a></span></h5>
+
+
+                        
+
+
+
+                        <p class="rcenter" >Диагональ экрана : <b> 6.1</b></p>
+                        <p class="rcenter" >Разрешение дисплея : <b> 828x1792</b></p>
+
+                        <p class="rcenter" >Операционная система: <b> iOS 13</b></p>
+                        <p class="rcenter" >Объём встроенной памяти : <b> 128</b></p>
+
+                        <p class="rcenter" >Количество SIM-карт : <b> 2G, 4G (LTE), 3G (WCDMA/UMTS)</b></p>
+                        <p class="rcenter" >Стандарт защиты от пыли и влаги: <b> IP68</b></p>
+                </p>
+                    </div>
+
+
+
+                    <div class="col-md-6">
+
+
+
+
+                        
+                    </div>
+
+
+
+                
+            </div>
+
+        
+    
+              
+          
+            
+        </div>
+        
+    </div>
+    
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<div class="container">
+<div class="wrapper">
+    <div class="tabs">
+        <ul>
+            <li class="active">
+                <span class="text" style="">Характеристика</span>
+                
+            </li>
+            <li>
+                
+                <span class="text">О товаре</span>
+            </li>
+            <li>
+                
+                <span class="text">Отзывы</span>
+            </li>
+            <li>
+                
+                <span class="text">Наличие товара</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        
+        <div class="tab_wrap" style="display: block;">
+           
+            <div class="tab_content">
+                <div class="row">
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <h3><b>Основные характеристики</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Серия</span>
+                                    <span>iPhone 11</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Модельный год</span>
+                                    <span>2019</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3><b>Дисплей</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Число пикселей на дюйм (PPI)</span>
+                                    <span>326</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Разрешение дисплея</span>
+                                    <span>828x1792</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Диагональ дисплея, дюйм</span>
+                                    <span>6.1</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Тип матрицы</span>
+                                    <span>Liquid Retina HD</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-12" style="margin-top: 30px;">
+                        <div class="col-md-6">
+                            <h3><b>Процессор</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Производитель процессора</span>
+                                    <span>Apple</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Операционная система</span>
+                                    <span>iOS 13</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Модель процессора</span>
+                                    <span>A13 Bionic</span>
+                                </li>
+
+                                
+
+
+                            </ul>
+                        </div>
+                        <div class="col-md-6" >
+                            <h3><b>Память</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Максимальный объем поддерживаемой карты памяти</span>
+                                    <span>Не поддерживает</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Объем оперативной памяти</span>
+                                    <span>4</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Объём встроенной памяти</span>
+                                    <span>64</span>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="col-md-12" style="margin-top: 30px;">
+                        <div class="col-md-6">
+                            <h3><b>SIM-карта</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Количество SIM-карт</span>
+                                    <span>1</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Размер SIM-карт</span>
+                                    <span>Nano-SIM</span>
+                                </li>
+                                
+
+                                
+
+
+                            </ul>
+                        </div>
+
+
+
+                        <div class="col-md-6" >
+                            <h3><b>Основная камера</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Встроенная вспышка</span>
+                                    <span>Да</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Количество мегапикселей</span>
+                                    <span>12</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Дополнительно</span>
+                                    <span class="botted-2">Портретный режим, Режим серийной съемки, Пятилинзовый объектив, Шестилинзовый объектив, Ночной режим, Панорама, Устранение эффекта красных глаз, Контроль экспозиции, Цифровой зум 5x, Эффект боке, Оптический зум 2x, Геотегинг</span>
+                                </li>
+
+                                <li class="botted">
+                                    <span>Светосила второго модуля</span>
+                                    <span class="botted-2">f/2.4</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Автофокус</span>
+                                    <span class="botted-2">Да</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Светосила</span>
+                                    <span class="botted-2">f/1.8</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Тип первого модуля</span>
+                                    <span class="botted-2">Широкоугольный объектив</span>
+                                </li>
+
+                                <li class="botted">
+                                    <span>Запись видео камеры</span>
+                                    <span class="botted-2">4K</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Тип второго модуля</span>
+                                    <span class="botted-2">Ультраширокоугольный</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Размер пикселя, мкм</span>
+                                    <span class="botted-2">1.4</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Стабилизация</span>
+                                    <span class="botted-2">Да</span>
+                                </li>
+
+                                <li class="botted">
+                                    <span>Количество мегапикселей второго модуля</span>
+                                    <span class="botted-2">12</span>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-12" style="margin-top: 30px;">
+                        <div class="col-md-6">
+                            <h3><b>Фронтальная камераа</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Светосила</span>
+                                    <span>f/2.2</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Автофокус</span>
+                                    <span>Да</span>
+                                </li>
+                                
+                                <li class="botted" style="">
+                                    <span>Стабилизация</span>
+                                    <span>Да</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Запись видео камеры</span>
+                                    <span>4K</span>
+                                </li>
+
+
+                                <li class="botted" style="">
+                                    <span>Дополнительно</span>
+                                    <span class="botted-2">HDR, Распознавание лиц, Вспышка дисплея, Режим замедленной съёмки, Портретный режим</span>
+                                </li>
+
+                                <li class="botted">
+                                    <span>Количество мегапикселей</span>
+                                    <span>12</span>
+                                </li>
+
+                                
+
+
+                            </ul>
+                        </div>
+
+
+
+                        <div class="col-md-6" >
+                            <h3><b>Связь</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Навигация</span>
+                                    <span>Глонасс, GPS, Galileo</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Разъёмы</span>
+                                    <span>Lightning</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Интерфейсы</span>
+                                    <span class="botted-2">NFC, Bluetooth, Wi-Fi</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Стандарт связи</span>
+                                    <span>2G, 4G (LTE), 3G (WCDMA/UMTS)</span>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-12" style="margin-top: 30px;">
+                        <div class="col-md-6">
+                            <h3><b>Фронтальная камераа</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Светосила</span>
+                                    <span>f/2.2</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Автофокус</span>
+                                    <span>Да</span>
+                                </li>
+                                
+                                <li class="botted" style="">
+                                    <span>Стабилизация</span>
+                                    <span>Да</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Запись видео камеры</span>
+                                    <span>4K</span>
+                                </li>
+
+
+                                <li class="botted" style="">
+                                    <span>Дополнительно</span>
+                                    <span class="botted-2">HDR, Распознавание лиц, Вспышка дисплея, Режим замедленной съёмки, Портретный режим</span>
+                                </li>
+
+                                <li class="botted">
+                                    <span>Количество мегапикселей</span>
+                                    <span>12</span>
+                                </li>
+
+                                
+
+
+                            </ul>
+                        </div>
+
+
+
+                        <div class="col-md-6" >
+                            <h3><b>Связь</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Навигация</span>
+                                    <span>Глонасс, GPS, Galileo</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Разъёмы</span>
+                                    <span>Lightning</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Интерфейсы</span>
+                                    <span class="botted-2">NFC, Bluetooth, Wi-Fi</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Стандарт связи</span>
+                                    <span>2G, 4G (LTE), 3G (WCDMA/UMTS)</span>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      <div class="col-md-12" style="margin-top: 30px;">
+                        <div class="col-md-6">
+                            <h3><b> Питание</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Время работы в режиме разговора, ч</span>
+                                    <span>17</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Возможность беспроводной зарядки</span>
+                                    <span>Да</span>
+                                </li>
+                                
+                                <li class="botted" style="">
+                                    <span>Ёмкость аккумулятора, mAh</span>
+                                    <span>3110</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Быстрая зарядка</span>
+                                    <span >Да</span>
+                                </li>
+
+
+                                
+                                
+
+
+                            </ul>
+                        </div>
+
+
+
+                        <div class="col-md-6" >
+                            <h3><b>Функции и особенности</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Материал корпуса</span>
+                                    <span class="botted-2">Металл, Стекло</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Особенности</span>
+                                    <span class="botted-2">Двойная камера, Стереодинамики, Пыле- /влагозащита, Смартфон с 4G</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Стандарт защиты от пыли и влаги</span>
+                                    <span class="botted-2">IP68</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Датчики</span>
+                                    <span class="botted-2">Гироскоп, ID лица, Датчик освещенности, Компас, Датчик приближения, Акселерометр, Барометр</span>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <div class="col-md-12" style="margin-top: 30px;">
+                        <div class="col-md-6">
+                            <h3><b> Габариты</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Толщина, мм </span>
+                                    <span>8.3</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Ширина, мм</span>
+                                    <span>75.7</span>
+                                </li>
+                                
+                                <li class="botted" style="">
+                                    <span>Вес, гр </span>
+                                    <span>194</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Высота, мм</span>
+                                    <span >150.9</span>
+                                </li>
+
+
+                                
+                                
+
+
+                            </ul>
+                        </div>
+
+
+
+                        <div class="col-md-6" >
+                            
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="tab_wrap" style="display: none;">
+            <div class="title">Letter</div>
+            <div class="tab_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+            </div>
+        </div>
+        <div class="tab_wrap" style="display: none;">
+            <div class="title">Phone</div>
+            <div class="tab_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+            </div>
+        </div>
+        <div class="tab_wrap" style="display: none;">
+            <div class="title">Smart Phone</div>
+            <div class="tab_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script type="text/javascript">
+            let thumbnails = document.getElementsByClassName('thumbnail')
+            let activeImages = document.getElementsByClassName('active')
+            for (var i=0; i < thumbnails.length; i++){
+                thumbnails[i].addEventListener('mouseover', function(){
+
+                    if (activeImages.length > 0){
+                        activeImages[0].classList.remove('active')
+                    }
+                
+                    this.classList.add('active')
+                    document.getElementById('featured').src = this.src
+                })
+
+
+            }
+
+            const buttonRight = document.getElementById('slideRight');
+            const buttonLeft = document.getElementById('slideLeft');
+
+
+            buttonRight.addEventListener('click', function(){
+                document.getElementById('slider').scrollLeft += 180;
+            })
+
+
+
+            buttonLeft.addEventListener('click', function(){
+              document.getElementById('slider').scrollLeft -= 180;
+            })
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+*{
+    list-style: none;
+    
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.tabs ul{
+    display: flex;
+    background: white;
+    width: 100%;
+    
+    margin-bottom: 25px;
+}
+
+.tabs ul li{
+    width: 285px;
+    padding: 15px;
+    border-right: 1px solid #dddddd;
+    text-align: center;
+    color: #3b3b3b;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.tabs ul li .icon{
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.tabs ul li:last-child{
+    border-right: 0px;
+}
+
+.tabs ul li:before{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #028f68;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.tabs ul li:hover,
+.tabs ul li.active{
+    background: #e8f5f1;
+    color: #028f68;
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+    opacity: 1;
+}
+
+.content{
+    background: #fbfbfb;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.tab_wrap .title{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.tab_wrap .tab_content p{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+</style>
+<script type="text/javascript">
+    
+
+    var tabs = document.querySelectorAll(".tabs ul li");
+        var tab_wraps = document.querySelectorAll(".tab_wrap");
+
+        tabs.forEach(function(tab, tab_index){
+            tab.addEventListener("click", function(){
+                tabs.forEach(function(tab){
+                    tab.classList.remove("active");
+                })
+                tab.classList.add("active");
+
+                tab_wraps.forEach(function(content, content_index){
+                    if(content_index == tab_index){
+                        content.style.display = "block";
+                    }
+                    else{
+                        content.style.display = "none";
+                    }
+                })
+
+            })
+        })
+</script>
+{%endblock%}

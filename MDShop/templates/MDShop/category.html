@@ -1,0 +1,296 @@
+
+
+{% extends 'MDShop/base.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%block content%}
+<style type="text/css">
+    
+    .logoo{
+        margin: 0px;
+    }
+</style>
+<div class="container">
+
+    <div class="row">
+        
+
+
+
+
+
+
+
+        <div class="col-md-2">
+            
+        </div>
+
+        <div class="col-md-10">
+
+
+
+
+
+       
+
+
+
+          
+
+
+
+
+
+{%for smart in alles%}
+  <div class="col-md-3" class="h">
+
+                        
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="{{smart.img1.url}}" class="img-responsive" alt="a" />
+                                </div>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="price col-md-12">
+                                            <h5><a href="{% url 'main' smart.slug %}">{{smart.title}}</a>
+                                                </h5>
+                                            <h5 class="price-text-color">
+                                                $199.99</h5>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="separator clear-left">
+                                        <p class="btn-add">
+                                            <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                                        <p class="btn-details">
+                                            <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+
+    </div>
+                        
+{%endfor%}
+{%for smart in alles%}
+  <div class="col-md-3" class="h">
+
+                        
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="{{smart.img1.url}}" class="img-responsive" alt="a" />
+                                </div>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="price col-md-12">
+                                            <h5><a href="{% url 'main' smart.slug %}">{{smart.title}}</a>
+                                                </h5>
+                                            <h5 class="price-text-color">
+                                                $199.99</h5>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="separator clear-left">
+                                        <p class="btn-add">
+                                            <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                                        <p class="btn-details">
+                                            <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+
+    </div>
+                        
+{%endfor%}
+{%for smart in alles%}
+  <div class="col-md-3" class="h">
+
+                        
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="{{smart.img1.url}}" class="img-responsive" alt="a" />
+                                </div>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="price col-md-12">
+                                            <h5><a href="{% url 'main' smart.slug %}">{{smart.title}}</a>
+                                                </h5>
+                                            <h5 class="price-text-color">
+                                                $199.99</h5>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="separator clear-left">
+                                        <p class="btn-add">
+                                            <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                                        <p class="btn-details">
+                                            <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+
+    </div>
+                        
+{%endfor%}
+
+{%for smart in alles%}
+  <div class="col-md-3" class="h">
+
+                        
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="{{smart.img1.url}}" class="img-responsive" alt="a" />
+                                </div>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="price col-md-12">
+                                            <h5><a href="{% url 'main' smart.slug %}">{{smart.title}}</a>
+                                                </h5>
+                                            <h5 class="price-text-color">
+                                                $199.99</h5>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="separator clear-left">
+                                        <p class="btn-add">
+                                            <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                                        <p class="btn-details">
+                                            <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+
+    </div>
+                        
+{%endfor%}
+
+{%for smart in alles%}
+  <div class="col-md-3" class="h">
+
+                        
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="{{smart.img1.url}}" class="img-responsive" alt="a" />
+                                </div>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="price col-md-12">
+                                            <h5><a href="{% url 'main' smart.slug %}">{{smart.title}}</a>
+                                                </h5>
+                                            <h5 class="price-text-color">
+                                                $199.99</h5>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="separator clear-left">
+                                        <p class="btn-add">
+                                            <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                                        <p class="btn-details">
+                                            <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+
+    </div>
+                        
+{%endfor%}
+
+
+
+
+                
+
+            
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </div>
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+{%endblock%}
