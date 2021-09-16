@@ -52,9 +52,6 @@ class smartphone(models.Model):
             verbose_name = "Смартфон"
             verbose_name_plural = "Смартфоны" 
 
-    def get_absolute_url(self):
-            return reverse("blog:Post",args=[self.id,self.slug])
- 
 
 class Customer(models.Model):
     """Пользователи"""
