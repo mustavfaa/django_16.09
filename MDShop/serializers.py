@@ -1,10 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import *
-from .models import smartphone
-from rest_framework import serializers
-from django.contrib.auth.models import User
-from django.contrib.auth.models import User
 
 
 class GenreSerializer(serializers.ModelSerializer):
